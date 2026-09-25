@@ -12,7 +12,7 @@ export default function ExperienceSection() {
       <div className="p-8 md:p-12 border-b-[3px] border-ink bg-accent text-base flex justify-between items-end">
         <div>
           <div className="font-mono text-ink text-xs font-bold uppercase tracking-widest mb-3">
-            02 // REKAM JEJAK & DAMPAK
+            02 // REKAM JEJAK PROFESIONAL
           </div>
           <h2 className="font-serif font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-base">
             Pengalaman

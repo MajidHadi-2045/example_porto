@@ -47,126 +47,125 @@ export const personalInfo = {
   name: "Majid Solihin Hadi",
   initials: "M.S.H.",
   signature: "Majid. S. Hadi",
-  role: "Full-Stack Web Developer & AI Enthusiast",
-  subRole: "Electrical Engineering Graduate · SKPI Unggul",
+  role: "Full-Stack Web Developer & AI Specialist",
+  subRole: "S1 Teknik Elektro · Universitas Lampung",
   education: "S1 Teknik Elektro, Universitas Lampung",
-  skpiBadge: "Predikat SKPI Unggul (High Honor)",
+  skpiBadge: "Predikat SKPI Unggul",
   email: "majidsolihin.h.22@gmail.com",
   location: "Bandar Lampung, Indonesia",
-  coordinates: "5.3971° S, 105.2668° E",
   photoUrl: "", // Isi dengan path gambar di public/ (misal "/foto.jpg") kapan saja
-  status: "OPEN FOR OPPORTUNITIES",
-  bio: "Insinyur perangkat lunak dengan latar belakang kuat di bidang Teknik Elektro Universitas Lampung. Menjembatani presisi logika perangkat keras (*hardware architecture*) dengan keanggunan serta skalabilitas sistem *full-stack web* dan *AI workflow* modern berkinerja tinggi.",
-  philosophy: "Sistem yang tangguh tidak lahir secara kebetulan; ia dibangun di atas pemahaman mendalam tentang arus data, efisiensi memori, dan antarmuka yang memanusiakan teknologi.",
+  status: "TERSEDIA UNTUK KOLABORASI PROFESIONAL",
+  bio: "Full-Stack Developer berlatar belakang S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul. Mengintegrasikan pendekatan rekayasa sistem yang terukur dengan praktik terbaik pengembangan web modern untuk membangun aplikasi yang andal, scalable, dan berkinerja tinggi.",
+  philosophy: "Perangkat lunak yang unggul memadukan keandalan arsitektur, efisiensi komputasi, dan pengalaman pengguna yang presisi untuk menghadirkan nilai nyata.",
   marqueeItems: [
     "MAJID SOLIHIN HADI",
     "S1 TEKNIK ELEKTRO UNILA",
     "PREDIKAT SKPI UNGGUL",
-    "FULL-STACK WEB ARCHITECT",
-    "AI & DISTRIBUTED SYSTEMS",
-    "KRTI NATIONAL FINALIST",
+    "FULL-STACK WEB DEVELOPER",
+    "APPLIED AI SPECIALIST",
+    "FINALIS NASIONAL KRTI 2024",
   ],
 };
 
 export const experiences: Experience[] = [
   {
     id: "exp-1",
-    role: "Lead Facilitator & Mentor",
+    role: "Lead Facilitator & Technical Mentor",
     company: "Coding Camp by DBS Foundation",
     location: "Remote / Indonesia",
     period: "Feb 2026 — Jun 2026",
-    badge: "Leadership & Education",
+    badge: "Technical Mentorship",
     description:
-      "Memimpin dan memfasilitasi program pelatihan intensif untuk mencetak Full-Stack Web Developer berstandar industri dengan kurikulum modern.",
+      "Memimpin program pelatihan intensif pengembangan web full-stack, membimbing peserta dalam menguasai standar industri berbasis React, Next.js, dan Node.js.",
     impacts: [
-      "Membimbing puluhan peserta dalam penguasaan ekosistem React, Next.js, Node.js, dan RESTful architecture.",
-      "Melakukan code review ketat berstandar industri, memastikan penerapan Clean Code dan Type-Safety.",
-      "Meningkatkan tingkat kelulusan proyek akhir peserta melalui sesi live debugging dan arsitektur sistem.",
+      "Mengorkestrasikan kurikulum full-stack modern dan mendampingi puluhan calon developer.",
+      "Melakukan evaluasi dan code review berkala untuk menegakkan standar Clean Code, modularitas, dan type-safety.",
+      "Mengawal penyelesaian proyek akhir berskala produksi hingga siap digunakan.",
     ],
-    technologies: ["React", "Next.js", "Node.js", "TypeScript", "REST APIs", "Code Review"],
+    technologies: ["React", "Next.js", "Node.js", "TypeScript", "REST Architecture", "Code Review"],
   },
   {
     id: "exp-2",
-    role: "Telecommunication Lab Assistant",
+    role: "Telecommunication Laboratory Assistant",
     company: "Universitas Lampung",
     location: "Bandar Lampung, Indonesia",
     period: "Feb 2025 — Feb 2026",
-    badge: "Academic & Research",
+    badge: "Academic & Laboratory",
     description:
-      "Mendampingi mahasiswa Teknik Elektro dalam operasional, modul praktikum, dan eksperimen laboratorium sistem transmisi & telekomunikasi.",
+      "Mengelola operasional praktikum laboratorium, memfasilitasi pemahaman mahasiswa terkait sistem telekomunikasi, transmisi gelombang, dan pemrosesan sinyal digital.",
     impacts: [
-      "Mengawasi jalannya praktikum modul pemrosesan sinyal digital dan transmisi gelombang radio.",
-      "Memelihara kalibrasi instrumen laboratorium seperti Spectrum Analyzer, Oscilloscope, dan Network Analyzer.",
-      "Menyusun dokumentasi teknis dan panduan praktikum laboratorium yang komprehensif.",
+      "Memandu praktikum laboratorium untuk puluhan mahasiswa Teknik Elektro setiap semester.",
+      "Mengoperasikan serta memelihara instrumen presisi tinggi seperti Spectrum Analyzer dan Digital Oscilloscope.",
+      "Menyempurnakan modul panduan teknis praktikum agar selaras dengan perkembangan industri telekomunikasi.",
     ],
-    technologies: ["Digital Signal Processing", "Telecommunications", "MATLAB", "Hardware Diagnostics"],
+    technologies: ["Digital Signal Processing", "Telecommunications", "MATLAB", "System Calibration"],
   },
   {
     id: "exp-3",
-    role: "Customer Service Assistant",
+    role: "Customer Service & Technical Support Assistant",
     company: "PT. TELKOM AKSES",
     location: "Kedaton, Bandar Lampung",
     period: "Jul 2025 — Agt 2025",
-    badge: "Field Experience",
+    badge: "Technical Operations",
     description:
-      "Menangani resolusi keluhan teknis pelanggan dan memastikan proses eskalasi layanan jaringan berjalan lancar di area Kedaton.",
+      "Menangani analisis keluhan teknis pelanggan jaringan serat optik (fiber optic) dan mengoordinasikan eskalasi penyelesaian bersama tim teknisi lapangan.",
     impacts: [
-      "Mengakselerasi penyelesaian tiket keluhan teknis pelanggan jaringan IndiHome fiber optic.",
-      "Berkoordinasi dengan tim teknisi lapangan untuk mitigasi gangguan jaringan secara real-time.",
+      "Mengakselerasi proses mitigasi dan penyelesaian tiket gangguan jaringan pelanggan.",
+      "Membangun alur komunikasi teknis yang efektif antara pelanggan dan teknisi lapangan di area Kedaton.",
     ],
-    technologies: ["Customer Relations", "Network Troubleshooting", "Incident Escalation"],
+    technologies: ["Fiber Optic Troubleshooting", "Incident Management", "Technical Support"],
   },
 ];
 
 export const projects: Project[] = [
   {
     id: "proj-1",
-    title: "KRTI UAV Telemetry & Ground Control System",
+    title: "Sistem Telemetri & Ground Control Station UAV",
     category: "Robotics & IoT",
     year: "2024",
     summary:
-      "Sistem pemantauan dan telemetri UAV real-time untuk Kontes Robot Terbang Indonesia (KRTI) 2024 Divisi LELA.",
+      "Arsitektur stasiun kendali darat (GCS) dan pemantauan data telemetri wahana udara nirawak (UAV) secara real-time.",
     description:
-      "Arsitektur ground control station yang menerima dan memvisualisasikan data telemetri (altitude, velocity, GPS coordinates, IMU attitude) secara real-time dari wahana drone menggunakan protokol transmisi serial latensi rendah.",
+      "Dirancang untuk Kontes Robot Terbang Indonesia (KRTI) 2024. Sistem ini memproses dan memvisualisasikan data sensor (altitude, GPS, IMU, velocity) secara real-time dengan latensi rendah melalui protokol serial terenkripsi.",
     impact:
-      "Membawa Tim Robotika Unila lolos sebagai Finalis Tingkat Nasional KRTI 2024 Divisi Long Endurance Low Altitude (LELA).",
+      "Mengantarkan Tim Robotika Universitas Lampung lolos sebagai Finalis Tingkat Nasional KRTI 2024 Divisi Long Endurance Low Altitude (LELA).",
     tags: ["Embedded C++", "Python", "WebSockets", "IoT", "Telemetry", "Real-Time Systems"],
     metrics: [
-      { label: "Data Latency", value: "< 45ms" },
+      { label: "Latensi Komunikasi", value: "< 45ms" },
       { label: "Pencapaian", value: "Finalis Nasional KRTI" },
     ],
   },
   {
     id: "proj-2",
-    title: "AI-Augmented Cloud Microservice Platform",
+    title: "Platform Web & Backend Terintegrasi AI",
     category: "AI & Cloud",
     year: "2026",
     summary:
-      "Platform backend terdistribusi bertenaga AI dengan integrasi LLM reasoning, caching vector, dan autentikasi aman.",
+      "Aplikasi full-stack dengan arsitektur microservices dan integrasi model AI untuk automasi pemrosesan data.",
     description:
-      "Dibangun berdasarkan kurikulum tingkat lanjut Dicoding x Accenture. Mengimplementasikan pipelines AI untuk ekstraksi teks kontekstual, integrasi vector embeddings, dan microservices skalabel.",
+      "Dikembangkan dalam program Dicoding x Accenture. Mengintegrasikan API kecerdasan buatan untuk analisis konten kontekstual, manajemen session terenkripsi, dan optimasi database relasional PostgreSQL.",
     impact:
-      "Meraih sertifikasi kelulusan dengan predikat tertinggi pada program React & Back-End With AI.",
+      "Meraih predikat kelulusan terbaik pada program sertifikasi React & Back-End With AI.",
     tags: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "AI APIs", "Docker", "AWS"],
     metrics: [
-      { label: "Throughput", value: "99.8% Uptime" },
-      { label: "Response", value: "Streaming SSE" },
+      { label: "Ketersediaan Sistem", value: "99.8% Uptime" },
+      { label: "Protokol Data", value: "Server-Sent Events" },
     ],
   },
   {
     id: "proj-3",
-    title: "Telecom Signal Analyzer & Simulation Suite",
+    title: "Simulator Sinyal & Modulasi Telekomunikasi",
     category: "Fullstack Web",
     year: "2025",
     summary:
-      "Aplikasi web interaktif untuk visualisasi modulasi sinyal telekomunikasi dan analisis frekuensi.",
+      "Aplikasi berbasis web untuk analisis frekuensi, visualisasi spektrum, dan simulasi modulasi sinyal telekomunikasi.",
     description:
-      "Alat bantu pembelajaran berbasis web yang memungkinkan mahasiswa laboratorium telekomunikasi mensimulasikan modulasi AM/FM/QAM serta filter noise secara visual langsung di browser.",
+      "Memungkinkan mahasiswa dan praktisi melakukan simulasi pemrosesan sinyal (AM, FM, filter noise) secara interaktif langsung melalui browser tanpa memerlukan software desktop berbayar.",
     impact:
-      "Digunakan sebagai modul peraga bantu pada praktikum Sistem Telekomunikasi Jurusan Teknik Elektro Unila.",
+      "Diadopsi sebagai media peraga praktikum resmi di Laboratorium Telekomunikasi Jurusan Teknik Elektro Unila.",
     tags: ["TypeScript", "Canvas API", "Math.js", "Tailwind CSS", "Web Audio API"],
     metrics: [
-      { label: "User Base", value: "100+ Mahasiswa" },
+      { label: "Pengguna Aktif", value: "100+ Mahasiswa" },
       { label: "Platform", value: "Web Native" },
     ],
   },
@@ -175,32 +174,32 @@ export const projects: Project[] = [
 export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Engineering",
-    categoryCode: "01 // FE",
+    categoryCode: "01 // FRONTEND",
     skills: [
-      { name: "React & Next.js (App Router)", level: "Expert", note: "Server Components, SSR/SSG, Suspense" },
-      { name: "TypeScript", level: "Advanced", note: "Strict Type Safety, Generic Architecture" },
-      { name: "Tailwind CSS & CSS Tokens", level: "Expert", note: "Design Systems, Brutalist & Glassmorphic UI" },
-      { name: "Framer Motion & Canvas", level: "Advanced", note: "Micro-interactions, 60fps animations" },
+      { name: "React & Next.js", level: "Lanjutan", note: "App Router, SSR/SSG, Server Components" },
+      { name: "TypeScript", level: "Lanjutan", note: "Strict Type Safety, Desain Pola Modular" },
+      { name: "Tailwind CSS & UI Systems", level: "Lanjutan", note: "Design Tokens, Antarmuka Responsif" },
+      { name: "Framer Motion", level: "Menengah", note: "Transisi Interaktif & Mikro-animasi" },
     ],
   },
   {
     title: "Backend & Systems",
-    categoryCode: "02 // BE",
+    categoryCode: "02 // BACKEND",
     skills: [
-      { name: "Node.js & Express / Nest", level: "Advanced", note: "RESTful & Event-Driven Microservices" },
-      { name: "Python", level: "Advanced", note: "Data processing, AI scripts, Automation" },
-      { name: "PostgreSQL & Prisma ORM", level: "Advanced", note: "Relational Schemas, Index Optimization" },
-      { name: "Redis & WebSockets", level: "Intermediate", note: "Pub/Sub, Low-Latency Realtime Feed" },
+      { name: "Node.js & Express", level: "Lanjutan", note: "RESTful API, Middleware, Autentikasi JWT" },
+      { name: "Python", level: "Menengah", note: "Pemrosesan Data, Skrip Automasi, Integrasi AI" },
+      { name: "PostgreSQL & Prisma ORM", level: "Lanjutan", note: "Skema Relasional & Optimasi Query" },
+      { name: "Redis & WebSockets", level: "Menengah", note: "Caching & Komunikasi Data Real-Time" },
     ],
   },
   {
-    title: "Cloud, DevOps & Hardware",
-    categoryCode: "03 // INFRA",
+    title: "Cloud, Tools & Hardware",
+    categoryCode: "03 // INFRA & HARDWARE",
     skills: [
-      { name: "AWS Cloud Services", level: "Certified", note: "EC2, S3, IAM, Cloud Practitioner Essentials" },
-      { name: "Docker & CI/CD Pipelines", level: "Intermediate", note: "Containerization, GitHub Actions" },
-      { name: "Cybersecurity Basics", level: "Certified", note: "Cisco Networking & Security Fundamentals" },
-      { name: "Embedded Systems & DSP", level: "Specialist", note: "C/C++, Arduino/ESP32, Telecomm Signal" },
+      { name: "AWS Cloud Infrastructure", level: "Tersertifikasi", note: "EC2, S3, IAM, Cloud Practitioner" },
+      { name: "Git & CI/CD Pipelines", level: "Lanjutan", note: "Branching Strategy, Version Control" },
+      { name: "Cybersecurity Fundamentals", level: "Tersertifikasi", note: "Cisco Networking & Security Protocols" },
+      { name: "Embedded Systems & DSP", level: "Keahlian Elektro", note: "C/C++, Arduino, Pemrosesan Sinyal" },
     ],
   },
 ];
@@ -226,7 +225,7 @@ export const certificates: Certificate[] = [
     badgeBg: "#EFEBE0",
     badgeColor: "#0F0F0F",
     credentialId: "DBS-CAMP-FS-2025",
-    skills: ["Fullstack Architecture", "REST API", "Database Design", "Agile Workflow"],
+    skills: ["Fullstack Architecture", "RESTful API", "Database Design", "Project Management"],
   },
   {
     id: "cert-3",
@@ -237,7 +236,7 @@ export const certificates: Certificate[] = [
     badgeBg: "#E64833",
     badgeColor: "#FFFFFF",
     credentialId: "AWS-CPE-2025-019",
-    skills: ["Cloud Architecture", "AWS EC2 & S3", "IAM Security", "Billing & Optimization"],
+    skills: ["Cloud Architecture", "AWS EC2 & S3", "IAM Security", "Cost Optimization"],
   },
   {
     id: "cert-4",
@@ -253,8 +252,8 @@ export const certificates: Certificate[] = [
 ];
 
 export const extraAchievements: string[] = [
-  "Finalis Nasional KRTI 2024 (Divisi LELA)",
+  "Finalis Tingkat Nasional KRTI 2024 (Divisi LELA)",
   "Tim Robotika Universitas Lampung",
   "Staf Himpunan Mahasiswa Teknik Elektro (HIMATRO)",
-  "Penerima Predikat SKPI Unggul Unila",
+  "Penerima Predikat SKPI Unggul Universitas Lampung",
 ];

@@ -14,7 +14,7 @@ export default function AboutSection() {
       <div className="lg:col-span-5 p-8 md:p-14 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-ink flex flex-col justify-between bg-ink text-base">
         <div>
           <div className="font-mono text-accent text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
-            <span>01 // PROFIL & PERSPEKTIF</span>
+            <span>01 // TENTANG & PRINSIP KERJA</span>
           </div>
 
           <motion.h2 
@@ -32,9 +32,9 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-base/20 font-mono text-xs text-base/50 flex justify-between">
-          <span>DEPT: ELECTRICAL ENGINEERING</span>
-          <span>UNILA ID</span>
+        <div className="mt-8 pt-6 border-t border-base/20 font-mono text-xs text-base/60 flex justify-between">
+          <span>Universitas Lampung</span>
+          <span>S1 Teknik Elektro</span>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ export default function AboutSection() {
         >
           <div className="flex items-center justify-between mb-6 pb-4 border-b-2 border-ink">
             <span className="font-mono text-accent font-bold uppercase tracking-widest text-xs">
-              Latar Belakang & Visi
+              Latar Belakang & Pendekatan Teknis
             </span>
             <span className="font-mono text-xs font-bold text-ink border border-ink px-2 py-0.5 bg-white shadow-brutal-sm">
               {personalInfo.skpiBadge}
@@ -56,7 +56,7 @@ export default function AboutSection() {
           </div>
 
           <p className="text-xl sm:text-2xl font-serif font-medium leading-snug mb-6 text-ink">
-            Mahasiswa S1 Teknik Elektro Universitas Lampung dengan fokus mendalam pada integrasi <span className="underline decoration-accent decoration-2">Full-Stack Web Development</span> dan <span className="underline decoration-accent decoration-2">Applied AI</span>.
+            Memadukan disiplin rekayasa sistem <span className="underline decoration-accent decoration-2">Teknik Elektro</span> dengan arsitektur modern <span className="underline decoration-accent decoration-2">Full-Stack Web & AI</span>.
           </p>
 
           <p className="text-base font-sans font-medium text-gray-800 leading-relaxed mb-8">
@@ -104,13 +104,13 @@ export default function AboutSection() {
             <div className="p-4 font-mono text-xs leading-relaxed overflow-x-auto text-emerald-400">
               {activeTab === "philosophy" && (
                 <code>
-                  <span className="text-purple-400">const</span> developer = &#123;<br />
+                  <span className="text-purple-400">const</span> engineerProfile = &#123;<br />
                   &nbsp;&nbsp;name: <span className="text-yellow-300">&quot;{personalInfo.name}&quot;</span>,<br />
-                  &nbsp;&nbsp;principles: [<span className="text-yellow-300">&quot;High Throughput&quot;</span>, <span className="text-yellow-300">&quot;Type Safety&quot;</span>, <span className="text-yellow-300">&quot;Zero Latency&quot;</span>],<br />
-                  &nbsp;&nbsp;fullstack: <span className="text-blue-400">&#123;</span><br />
+                  &nbsp;&nbsp;coreStandards: [<span className="text-yellow-300">&quot;High Performance&quot;</span>, <span className="text-yellow-300">&quot;Type Safety&quot;</span>, <span className="text-yellow-300">&quot;Maintainability&quot;</span>],<br />
+                  &nbsp;&nbsp;specializations: <span className="text-blue-400">&#123;</span><br />
                   &nbsp;&nbsp;&nbsp;&nbsp;frontend: <span className="text-yellow-300">&quot;Next.js App Router + TypeScript&quot;</span>,<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;backend: <span className="text-yellow-300">&quot;Node.js + PostgreSQL + Prisma&quot;</span>,<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;ai_pipeline: <span className="text-yellow-300">&quot;LangChain / OpenAI / Gemini SDK&quot;</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;aiWorkflow: <span className="text-yellow-300">&quot;LLM Orchestration & APIs&quot;</span><br />
                   &nbsp;&nbsp;<span className="text-blue-400">&#125;</span><br />
                   &#125;;
                 </code>
@@ -118,12 +118,12 @@ export default function AboutSection() {
 
               {activeTab === "hardware" && (
                 <code>
-                  <span className="text-purple-400">#include</span> <span className="text-yellow-300">&lt;telecom_unila.h&gt;</span><br />
-                  <span className="text-base/40">// Bridging hardware signal precision to software APIs</span><br />
-                  <span className="text-purple-400">void</span> <span className="text-blue-400">init_telemetry_node</span>() &#123;<br />
-                  &nbsp;&nbsp;configure_baud_rate(<span className="text-yellow-300">115200</span>);<br />
-                  &nbsp;&nbsp;enable_packet_crc_check();<br />
-                  &nbsp;&nbsp;stream_to_websocket_relay(<span className="text-yellow-300">&quot;wss://ground-station.unila.ac.id&quot;</span>);<br />
+                  <span className="text-purple-400">#include</span> <span className="text-yellow-300">&lt;telemetry_bridge.h&gt;</span><br />
+                  <span className="text-base/40">// Bridging hardware signal accuracy with web stream layer</span><br />
+                  <span className="text-purple-400">void</span> <span className="text-blue-400">init_telemetry_pipeline</span>() &#123;<br />
+                  &nbsp;&nbsp;configure_serial_baud(<span className="text-yellow-300">115200</span>);<br />
+                  &nbsp;&nbsp;enable_crc_verification();<br />
+                  &nbsp;&nbsp;stream_realtime_websocket();<br />
                   &#125;
                 </code>
               )}
@@ -131,10 +131,10 @@ export default function AboutSection() {
               {activeTab === "specs" && (
                 <code>
                   &#123;<br />
-                  &nbsp;&nbsp;<span className="text-purple-400">&quot;university&quot;</span>: <span className="text-yellow-300">&quot;Universitas Lampung&quot;</span>,<br />
-                  &nbsp;&nbsp;<span className="text-purple-400">&quot;major&quot;</span>: <span className="text-yellow-300">&quot;S1 Teknik Elektro&quot;</span>,<br />
-                  &nbsp;&nbsp;<span className="text-purple-400">&quot;skpi_honor&quot;</span>: <span className="text-yellow-300">&quot;Unggul&quot;</span>,<br />
-                  &nbsp;&nbsp;<span className="text-purple-400">&quot;national_contest&quot;</span>: <span className="text-yellow-300">&quot;Finalis KRTI 2024 (LELA)&quot;</span><br />
+                  &nbsp;&nbsp;<span className="text-purple-400">&quot;institution&quot;</span>: <span className="text-yellow-300">&quot;Universitas Lampung&quot;</span>,<br />
+                  &nbsp;&nbsp;<span className="text-purple-400">&quot;degree&quot;</span>: <span className="text-yellow-300">&quot;S1 Teknik Elektro&quot;</span>,<br />
+                  &nbsp;&nbsp;<span className="text-purple-400">&quot;academicHonor&quot;</span>: <span className="text-yellow-300">&quot;Predikat SKPI Unggul&quot;</span>,<br />
+                  &nbsp;&nbsp;<span className="text-purple-400">&quot;nationalCompetition&quot;</span>: <span className="text-yellow-300">&quot;Finalis Nasional KRTI 2024 (LELA)&quot;</span><br />
                   &#125;
                 </code>
               )}

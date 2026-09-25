@@ -29,16 +29,16 @@ export default function Footer() {
       </svg>
 
       <div className="font-mono text-accent text-xs font-bold uppercase tracking-widest mb-4 z-10">
-        05 // INITIATE DIALOGUE & COLLABORATION
+        05 // KONTAK & HUBUNGAN
       </div>
 
-      <h2 className="font-serif font-black text-5xl sm:text-7xl lg:text-8xl uppercase mb-8 z-10 tracking-tight leading-none text-base">
-        Let&apos;s Work<br />
-        <span className="text-accent italic font-normal">Together.</span>
+      <h2 className="font-serif font-black text-5xl sm:text-7xl lg:text-8xl uppercase mb-6 z-10 tracking-tight leading-none text-base">
+        Mari<br />
+        <span className="text-accent italic font-normal">Berkolaborasi.</span>
       </h2>
 
-      <p className="font-sans text-base sm:text-lg text-base/80 max-w-xl mx-auto mb-8 z-10">
-        Terbuka untuk kolaborasi proyek rekayasa perangkat lunak, arsitektur sistem, riset AI, atau posisi profesional penuh waktu.
+      <p className="font-sans text-base sm:text-lg text-base/80 max-w-xl mx-auto mb-8 z-10 leading-relaxed">
+        Tertarik untuk berdiskusi seputar proyek web, peluang kerja sama, atau sekadar bertukar wawasan seputar teknologi? Silakan hubungi saya melalui email di bawah.
       </p>
 
       {/* Action CTA Buttons */}
@@ -59,7 +59,7 @@ export default function Footer() {
         </button>
       </div>
 
-      {/* System Telemetry & Coordinates Bar */}
+      {/* Footer Info Bar */}
       <div className="mt-8 pt-8 border-t border-gray-800 w-full flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-xs uppercase opacity-75 z-10">
         <div className="flex items-center gap-3">
           <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-4">
-          <span>LAT/LON: {personalInfo.coordinates}</span>
+          <span>{personalInfo.location}</span>
           <button
             onClick={scrollToTop}
             className="border border-base/40 px-3 py-1 hover:bg-base hover:text-ink transition-colors"
