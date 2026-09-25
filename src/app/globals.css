@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #EFEBE0;
+  --color-ink: #0F0F0F;
+  --color-accent: #E64833;
+
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+
+  --shadow-brutal: 8px 8px 0px 0px rgba(15, 15, 15, 1);
+  --shadow-brutal-sm: 4px 4px 0px 0px rgba(15, 15, 15, 1);
+  --shadow-brutal-hover: 12px 12px 0px 0px rgba(230, 72, 51, 1);
+  --shadow-brutal-white: 8px 8px 0px 0px rgba(239, 235, 224, 1);
+
+  --animate-marquee: marquee 22s linear infinite;
+  --animate-spin-slow: spinSlow 12s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes spinSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #EFEBE0;
+  color: #0F0F0F;
+}
+
+body {
+  font-family: var(--font-manrope), sans-serif;
+  background-color: #EFEBE0;
+  color: #0F0F0F;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #E64833;
+  color: #ffffff;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
