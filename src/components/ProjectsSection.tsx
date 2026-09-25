@@ -20,7 +20,7 @@ export default function ProjectsSection() {
       <div className="p-8 md:p-12 border-b-[3px] border-ink bg-ink text-base flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
         <div>
           <div className="font-mono text-accent text-xs font-bold uppercase tracking-widest mb-3">
-            03 // RISET, STUDI KASUS & REKAYASA SISTEM
+            03 // STUDI KASUS & RISET REKAYASA
           </div>
           <h2 className="font-serif font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-base">
             Proyek Pilihan
@@ -99,7 +99,7 @@ export default function ProjectsSection() {
 
               {/* Highlight Impact */}
               <div className="bg-ink/5 border-l-4 border-accent p-3 mb-6 font-sans text-xs font-semibold text-ink">
-                🏆 {proj.impact}
+                ★ {proj.impact}
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
 
               {/* Inspect Button */}
               <div className="flex items-center justify-between font-mono text-xs font-bold uppercase text-ink border-t-2 border-ink pt-4 group-hover:text-accent transition-colors">
-                <span>Inspeksi Arsitektur Sistem</span>
+                <span>Pelajari Arsitektur Proyek</span>
                 <span className="text-lg">→</span>
               </div>
             </div>

@@ -15,10 +15,10 @@ export default function CertificateSection() {
       <div className="lg:col-span-7 p-8 md:p-14 border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-ink bg-base flex flex-col justify-between">
         <div>
           <div className="font-mono text-accent text-xs font-bold uppercase tracking-widest mb-4">
-            04 // ARSITEKTUR & TECH STACK
+            04 // KOMPETENSI & TECH STACK
           </div>
           <h3 className="font-serif font-black text-4xl sm:text-5xl uppercase mb-10 tracking-tight text-ink">
-            Keahlian &<br />Infrastruktur
+            Keahlian &<br />Infrastruktur Teknis
           </h3>
 
           <div className="space-y-8">
@@ -89,7 +89,7 @@ export default function CertificateSection() {
             VALIDASI RESMI
           </div>
           <h3 className="font-serif font-black text-4xl sm:text-5xl uppercase mb-10 tracking-tight text-ink">
-            Kredensial<br />& Lisensi
+            Kredensial<br />& Sertifikasi
           </h3>
 
           <div className="space-y-5">
@@ -137,7 +137,7 @@ export default function CertificateSection() {
 
         {/* Footnote note */}
         <div className="mt-8 pt-4 border-t border-ink/20 font-mono text-xs text-ink/60 text-center">
-          💡 Klik pada sertifikat untuk melihat detail kredensial resmi
+          💡 Klik pada kartu untuk melihat detail kredensial resmi
         </div>
       </div>
 
