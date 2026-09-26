@@ -34,7 +34,8 @@ export interface Certificate {
   badgeColor: string;
   credentialId: string;
   skills: string[];
-  credentialUrl?: string;
+  credentialUrl?: string; // Link ke halaman verifikasi / sertifikat online
+  imageUrl?: string;      // URL atau path lokal gambar sertifikat (misal: "/sertifikat1.jpg" di public folder)
 }
 
 export interface SkillCategory {
@@ -215,6 +216,8 @@ export const certificates: Certificate[] = [
     badgeColor: "#E64833",
     credentialId: "DICODING-AI-2026-988",
     skills: ["React", "AI Integration", "Backend Microservices", "Cloud Deployment"],
+    credentialUrl: "https://www.dicoding.com/certificates/DICODING-AI-2026-988",
+    imageUrl: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "cert-2",
@@ -226,6 +229,8 @@ export const certificates: Certificate[] = [
     badgeColor: "#0F0F0F",
     credentialId: "DBS-CAMP-FS-2025",
     skills: ["Fullstack Architecture", "RESTful API", "Database Design", "Project Management"],
+    credentialUrl: "https://dbs.com/codingcamp/verify/DBS-CAMP-FS-2025",
+    imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "cert-3",
@@ -237,6 +242,7 @@ export const certificates: Certificate[] = [
     badgeColor: "#FFFFFF",
     credentialId: "AWS-CPE-2025-019",
     skills: ["Cloud Architecture", "AWS EC2 & S3", "IAM Security", "Cost Optimization"],
+    credentialUrl: "https://aws.amazon.com/verification/AWS-CPE-2025-019",
   },
   {
     id: "cert-4",
@@ -248,6 +254,7 @@ export const certificates: Certificate[] = [
     badgeColor: "#38BDF8",
     credentialId: "CISCO-SEC-2024-441",
     skills: ["Network Security", "Threat Analysis", "Packet Inspection", "Cryptography"],
+    credentialUrl: "https://www.credly.com/org/cisco",
   },
 ];
 

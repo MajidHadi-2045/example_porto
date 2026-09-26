@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Certificate } from "@/data/portfolioData";
 
 interface CertificateModalProps {
@@ -9,6 +9,8 @@ interface CertificateModalProps {
 }
 
 export default function CertificateModal({ cert, onClose }: CertificateModalProps) {
+  const [activeTab, setActiveTab] = useState<"image" | "badge">("image");
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -17,7 +19,18 @@ export default function CertificateModal({ cert, onClose }: CertificateModalProp
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
+  useEffect(() => {
+    if (cert?.imageUrl) {
+      setActiveTab("image");
+    } else {
+      setActiveTab("badge");
+    }
+  }, [cert]);
+
   if (!cert) return null;
+
+  const hasImage = Boolean(cert.imageUrl);
+  const hasLink = Boolean(cert.credentialUrl);
 
   return (
     <div
@@ -25,64 +38,134 @@ export default function CertificateModal({ cert, onClose }: CertificateModalProp
       onClick={onClose}
     >
       <div
-        className="bg-base border-[3px] border-ink max-w-lg w-full p-6 sm:p-8 shadow-brutal relative max-h-[90vh] overflow-y-auto"
+        className="bg-base border-[3px] border-ink max-w-xl w-full p-6 sm:p-8 shadow-brutal relative max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-4 border-b-2 border-ink pb-4 mb-6">
           <div>
-            <div className="font-mono text-xs font-bold text-accent uppercase">
-              VALIDASI KOMPETENSI RESMI · {cert.year}
+            <div className="font-mono text-xs font-bold text-accent uppercase flex items-center gap-2">
+              <span>VALIDASI KOMPETENSI RESMI</span>
+              <span>·</span>
+              <span>{cert.year}</span>
             </div>
-            <h3 className="font-serif font-black text-2xl uppercase text-ink mt-1">
+            <h3 className="font-serif font-black text-2xl uppercase text-ink mt-1 leading-snug">
               {cert.title}
             </h3>
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 bg-ink text-base border-2 border-ink font-mono font-bold text-sm flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+            className="w-9 h-9 bg-ink text-base border-2 border-ink font-mono font-bold text-sm flex items-center justify-center hover:bg-accent hover:text-white transition-colors shrink-0"
+            title="Tutup (ESC)"
           >
             ✕
           </button>
         </div>
 
-        {/* Certificate Badge Display */}
-        <div
-          className="w-full aspect-[16/9] border-2 border-ink mb-6 flex flex-col items-center justify-center p-6 text-center shadow-brutal-sm relative overflow-hidden"
-          style={{ backgroundColor: cert.badgeBg, color: cert.badgeColor }}
-        >
-          {/* Subtle Watermark Seal */}
-          <div className="absolute inset-0 opacity-10 flex items-center justify-center text-8xl font-serif font-black pointer-events-none">
-            UNILA
+        {/* Tab Selector if image is available */}
+        {hasImage && (
+          <div className="flex border-2 border-ink bg-white mb-4 shadow-brutal-sm p-1 gap-1 font-mono text-xs font-bold uppercase">
+            <button
+              onClick={() => setActiveTab("image")}
+              className={`flex-1 py-1.5 px-3 text-center transition-all ${
+                activeTab === "image"
+                  ? "bg-ink text-base shadow-brutal-sm"
+                  : "hover:bg-accent/10 text-ink"
+              }`}
+            >
+              📷 Gambar Sertifikat
+            </button>
+            <button
+              onClick={() => setActiveTab("badge")}
+              className={`flex-1 py-1.5 px-3 text-center transition-all ${
+                activeTab === "badge"
+                  ? "bg-ink text-base shadow-brutal-sm"
+                  : "hover:bg-accent/10 text-ink"
+              }`}
+            >
+              🏅 Badge Kredensial
+            </button>
           </div>
+        )}
 
-          <div className="z-10 flex flex-col items-center gap-2">
-            <span className="text-3xl">🏅</span>
-            <span className="font-mono text-xs font-bold uppercase tracking-widest px-3 py-1 border border-current rounded">
-              {cert.badgeText}
-            </span>
-            <div className="font-serif font-bold text-lg leading-tight mt-1">
-              {cert.issuer}
+        {/* Display Image or Badge */}
+        {hasImage && activeTab === "image" ? (
+          <div className="w-full border-2 border-ink bg-white mb-6 p-2 shadow-brutal-sm relative group overflow-hidden">
+            <div className="relative aspect-[16/10] bg-gray-100 border border-ink/20 flex items-center justify-center overflow-hidden">
+              <img
+                src={cert.imageUrl}
+                alt={`Sertifikat ${cert.title}`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = "none";
+                }}
+              />
+            </div>
+            <div className="mt-2 flex justify-between items-center px-1 font-mono text-[11px] text-ink/70">
+              <span>Pratinjau Dokumen Sertifikat</span>
+              <a
+                href={cert.imageUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-accent hover:underline flex items-center gap-1"
+              >
+                <span>Buka Gambar Penuh</span> ↗
+              </a>
             </div>
           </div>
-        </div>
+        ) : (
+          <div
+            className="w-full aspect-[16/9] border-2 border-ink mb-6 flex flex-col items-center justify-center p-6 text-center shadow-brutal-sm relative overflow-hidden"
+            style={{ backgroundColor: cert.badgeBg, color: cert.badgeColor }}
+          >
+            {/* Subtle Watermark Seal */}
+            <div className="absolute inset-0 opacity-10 flex items-center justify-center text-8xl font-serif font-black pointer-events-none select-none">
+              UNILA
+            </div>
+
+            <div className="z-10 flex flex-col items-center gap-2">
+              <span className="text-3xl">🏅</span>
+              <span className="font-mono text-xs font-bold uppercase tracking-widest px-3 py-1 border border-current rounded">
+                {cert.badgeText}
+              </span>
+              <div className="font-serif font-bold text-lg leading-tight mt-1">
+                {cert.issuer}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Details List */}
-        <div className="space-y-4 mb-6 text-sm font-sans">
-          <div className="flex justify-between border-b border-ink/20 pb-2">
+        <div className="space-y-3.5 mb-6 text-sm font-sans">
+          <div className="flex justify-between items-center border-b border-ink/20 pb-2">
             <span className="font-mono text-xs text-ink/60 uppercase">Institusi Penerbit:</span>
             <span className="font-bold text-ink">{cert.issuer}</span>
           </div>
 
-          <div className="flex justify-between border-b border-ink/20 pb-2">
+          <div className="flex justify-between items-center border-b border-ink/20 pb-2">
             <span className="font-mono text-xs text-ink/60 uppercase">ID Kredensial / No:</span>
             <span className="font-mono font-bold text-accent">{cert.credentialId}</span>
           </div>
 
-          <div className="flex justify-between border-b border-ink/20 pb-2">
+          <div className="flex justify-between items-center border-b border-ink/20 pb-2">
             <span className="font-mono text-xs text-ink/60 uppercase">Tahun Terbit:</span>
             <span className="font-bold text-ink">{cert.year}</span>
           </div>
+
+          {hasLink && (
+            <div className="flex justify-between items-center border-b border-ink/20 pb-2">
+              <span className="font-mono text-xs text-ink/60 uppercase">Link Verifikasi:</span>
+              <a
+                href={cert.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs font-bold text-accent hover:underline flex items-center gap-1 max-w-[220px] truncate"
+              >
+                <span className="truncate">{cert.credentialUrl}</span>
+                <span>↗</span>
+              </a>
+            </div>
+          )}
 
           <div>
             <span className="font-mono text-xs text-ink/60 uppercase block mb-2">Kompetensi yang Divalidasi:</span>
@@ -96,17 +179,30 @@ export default function CertificateModal({ cert, onClose }: CertificateModalProp
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t-2 border-ink">
-          <span className="font-mono text-[10px] text-emerald-600 font-bold uppercase flex items-center gap-1">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
-            TERVERIFIKASI RESMI
-          </span>
+        {/* Action Button & Footer */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t-2 border-ink">
+          {hasLink ? (
+            <a
+              href={cert.credentialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs font-bold uppercase bg-accent text-white px-5 py-2.5 border-2 border-ink shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal transition-all text-center flex items-center justify-center gap-2"
+            >
+              <span>🔗 Buka Link Sertifikat</span>
+              <span>↗</span>
+            </a>
+          ) : (
+            <span className="font-mono text-[10px] text-emerald-600 font-bold uppercase flex items-center gap-1">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+              TERVERIFIKASI RESMI
+            </span>
+          )}
+
           <button
             onClick={onClose}
-            className="font-mono text-xs font-bold uppercase bg-ink text-base px-5 py-2 border-2 border-ink hover:bg-accent transition-colors"
+            className="font-mono text-xs font-bold uppercase bg-ink text-base px-5 py-2.5 border-2 border-ink hover:bg-accent transition-colors"
           >
-            Tutup
+            Tutup [ESC]
           </button>
         </div>
 

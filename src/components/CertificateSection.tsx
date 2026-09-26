@@ -103,13 +103,26 @@ export default function CertificateSection() {
                 className="group border-[3px] border-ink bg-white p-4 shadow-brutal hover:shadow-brutal-hover transition-all duration-300 flex gap-4 items-center cursor-pointer hover:-translate-x-1 hover:-translate-y-1"
                 onClick={() => setSelectedCert(cert)}
               >
-                {/* Thumbnail Badge */}
+                {/* Thumbnail Badge or Image Preview */}
                 <div
-                  className="w-20 sm:w-24 aspect-square border-2 border-ink overflow-hidden flex flex-col items-center justify-center font-mono font-bold text-[10px] uppercase p-2 text-center tracking-wider shrink-0 transition-transform duration-300 group-hover:scale-105"
+                  className="w-20 sm:w-24 aspect-square border-2 border-ink overflow-hidden flex flex-col items-center justify-center font-mono font-bold text-[10px] uppercase text-center tracking-wider shrink-0 transition-transform duration-300 group-hover:scale-105 relative"
                   style={{ backgroundColor: cert.badgeBg, color: cert.badgeColor }}
                 >
-                  <span className="text-xl mb-1">🏅</span>
-                  <span className="leading-tight">{cert.badgeText.split(" ")[0]}</span>
+                  {cert.imageUrl ? (
+                    <img
+                      src={cert.imageUrl}
+                      alt={cert.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLElement).style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div className="p-2 flex flex-col items-center justify-center">
+                      <span className="text-xl mb-1">🏅</span>
+                      <span className="leading-tight">{cert.badgeText.split(" ")[0]}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Info */}
@@ -118,15 +131,20 @@ export default function CertificateSection() {
                     <span className="font-mono text-xs font-bold text-accent">
                       {cert.year}
                     </span>
-                    <span className="font-mono text-[10px] text-ink/60 uppercase">
-                      ID: {cert.credentialId.split("-").slice(0, 2).join("-")}...
-                    </span>
+                    <div className="flex items-center gap-1.5 font-mono text-[10px]">
+                      {cert.imageUrl && (
+                        <span className="bg-ink/10 text-ink px-1.5 py-0.5 rounded font-bold">📷 GAMBAR</span>
+                      )}
+                      {cert.credentialUrl && (
+                        <span className="bg-accent/10 text-accent px-1.5 py-0.5 rounded font-bold">🔗 LINK</span>
+                      )}
+                    </div>
                   </div>
 
                   <h4 className="font-serif font-bold text-lg leading-snug mb-1 group-hover:text-accent transition-colors truncate">
                     {cert.title}
                   </h4>
-                  <p className="font-sans text-xs font-semibold text-ink/70">
+                  <p className="font-sans text-xs font-semibold text-ink/70 truncate">
                     {cert.issuer}
                   </p>
                 </div>
@@ -137,7 +155,7 @@ export default function CertificateSection() {
 
         {/* Footnote note */}
         <div className="mt-8 pt-4 border-t border-ink/20 font-mono text-xs text-ink/60 text-center">
-          💡 Klik pada kartu untuk melihat detail kredensial resmi
+          💡 Klik pada kartu untuk melihat pratinjau gambar & link sertifikat resmi
         </div>
       </div>
 
