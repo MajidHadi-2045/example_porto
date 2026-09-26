@@ -26,7 +26,7 @@ export default function ExperienceSection() {
       </div>
 
       {/* Grid Hairline 3px dengan Background Ink & Gap 3px */}
-      <div className="bg-ink grid grid-cols-1 md:grid-cols-3 gap-[3px]">
+      <div className="bg-ink grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3px]">
         {experiences.map((exp, idx) => (
           <motion.div
             key={exp.id}
