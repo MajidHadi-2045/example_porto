@@ -202,53 +202,109 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "proj-1",
-    title: "Sistem Telemetri & Ground Control Station UAV",
+    title: "Smart Cattle Barn Monitoring System",
     category: "Robotics & IoT",
-    year: "2024",
+    year: "2025",
     summary:
-      "Arsitektur stasiun kendali darat (GCS) dan pemantauan data telemetri wahana udara nirawak (UAV) secara real-time.",
+      "Sistem pemantauan peternakan sapi ganda berskala besar dengan arsitektur hybrid event-driven berbasis IoT.",
     description:
-      "Dirancang untuk Kontes Robot Terbang Indonesia (KRTI) 2024. Sistem ini memproses dan memvisualisasikan data sensor (altitude, GPS, IMU, velocity) secara real-time dengan latensi rendah melalui protokol serial terenkripsi.",
+      "Sistem pemantauan kandang sapi pintar (Thesis Project) yang memanfaatkan Hybrid Event-Driven Architecture. Menggunakan protokol MQTT untuk transmisi data telemetry sensor real-time berkecepatan tinggi, diproses backend NestJS, dan dioptimalkan dengan Redis cache-aside strategy untuk menangani metrik sensor tanpa membebani database PostgreSQL utama.",
     impact:
-      "Mengantarkan Tim Robotika Universitas Lampung lolos sebagai Finalis Tingkat Nasional KRTI 2024 Divisi Long Endurance Low Altitude (LELA).",
-    tags: ["Embedded C++", "Python", "WebSockets", "IoT", "Telemetry", "Real-Time Systems"],
+      "Memanfaatkan MQTT real-time & Redis cache-aside strategy untuk mengolah data sensor berkecepatan tinggi tanpa membebani database utama.",
+    tags: ["NestJS", "PostgreSQL", "Redis", "Prisma ORM", "MQTT", "WebSockets", "IoT"],
+    liveUrl: "https://smartcattlebarn.site/smartbarn.apk",
     metrics: [
-      { label: "Latensi Komunikasi", value: "< 45ms" },
-      { label: "Pencapaian", value: "Finalis Nasional KRTI" },
+      { label: "Arsitektur", value: "Hybrid Event-Driven" },
+      { label: "Strategi Caching", value: "Redis Cache-Aside" },
     ],
   },
   {
     id: "proj-2",
-    title: "Platform Web & Backend Terintegrasi AI",
+    title: "Smart CO₂ — Real-Time Environmental Dashboard",
     category: "AI & Cloud",
-    year: "2026",
+    year: "2025",
     summary:
-      "Aplikasi full-stack dengan arsitektur microservices dan integrasi model AI untuk automasi pemrosesan data.",
+      "Backend & dashboard pemantauan emisi karbon dan cuaca real-time untuk kawasan perkebunan kelapa sawit.",
     description:
-      "Dikembangkan dalam program Dicoding x Accenture. Mengintegrasikan API kecerdasan buatan untuk analisis konten kontekstual, manajemen session terenkripsi, dan optimasi database relasional PostgreSQL.",
+      "Platform backend dan pemantauan lingkungan real-time untuk mengukur emisi CO₂ dan indikator cuaca di perkebunan kelapa sawit yang berkelanjutan. Membangun endpoint RESTful API yang andal menggunakan Express.js dan PostgreSQL untuk menerima serta mengolah data telemetry dari berbagai sensor IoT secara terukur.",
     impact:
-      "Meraih predikat kelulusan terbaik pada program sertifikasi React & Back-End With AI.",
-    tags: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "AI APIs", "Docker", "AWS"],
+      "Membangun endpoint RESTful API terukur untuk pengolahan data emisi karbon & cuaca lokasi perkebunan sawit secara real-time.",
+    tags: ["Express.js", "Node.js", "PostgreSQL", "IoT Sensors", "RESTful API", "Environmental Tech"],
+    liveUrl: "https://lnkd.in/g2CRUPW2",
     metrics: [
-      { label: "Ketersediaan Sistem", value: "99.8% Uptime" },
-      { label: "Protokol Data", value: "Server-Sent Events" },
+      { label: "Domain", value: "Perkebunan Sawit" },
+      { label: "Protokol", value: "RESTful API" },
     ],
   },
   {
     id: "proj-3",
-    title: "Simulator Sinyal & Modulasi Telekomunikasi",
+    title: "Smart Cattle Barn Mobile App",
     category: "Fullstack Web",
     year: "2025",
     summary:
-      "Aplikasi berbasis web untuk analisis frekuensi, visualisasi spektrum, dan simulasi modulasi sinyal telekomunikasi.",
+      "Aplikasi mobile berbasis React Native dengan UI clean & ringan terintegrasi ke backend NestJS & MQTT.",
     description:
-      "Memungkinkan mahasiswa dan praktisi melakukan simulasi pemrosesan sinyal (AM, FM, filter noise) secara interaktif langsung melalui browser tanpa memerlukan software desktop berbayar.",
+      "Aplikasi mobile berbasis React Native dengan desain antarmuka yang bersih, intuitif, dan ringan. Terintegrasi penuh dengan ekosistem backend NestJS, protokol MQTT real-time, Redis cache, Prisma ORM, dan database PostgreSQL untuk penyajian data telemetry kandang secara langsung.",
     impact:
-      "Diadopsi sebagai media peraga praktikum resmi di Laboratorium Telekomunikasi Jurusan Teknik Elektro Unila.",
-    tags: ["TypeScript", "Canvas API", "Math.js", "Tailwind CSS", "Web Audio API"],
+      "Menyajikan visualisasi data sensor real-time dengan antarmuka mobile React Native yang ringan, cepat, dan handal.",
+    tags: ["React Native", "TypeScript", "NestJS", "MQTT", "Redis", "PostgreSQL"],
+    liveUrl: "https://smartcattlebarn.site/smartbarn.apk",
     metrics: [
-      { label: "Pengguna Aktif", value: "100+ Mahasiswa" },
-      { label: "Platform", value: "Web Native" },
+      { label: "Platform", value: "React Native" },
+      { label: "Koneksi", value: "MQTT & WebSockets" },
+    ],
+  },
+  {
+    id: "proj-4",
+    title: "Dicoding Story Web App",
+    category: "Fullstack Web",
+    year: "2025",
+    summary:
+      "Aplikasi web dinamis dengan integrasi REST API Dicoding untuk autentikasi, peta lokasi, dan manajemen state.",
+    description:
+      "Aplikasi berbasis web yang merender UI dinamis dengan arsitektur Single Page Application. Terintegrasi penuh dengan ekosistem REST API Dicoding untuk penanganan autentikasi pengguna, lokasi peta cerita, serta manajemen state yang responsif.",
+    impact:
+      "Lulus penilaian sertifikasi Dicoding dengan implementasi antarmuka dinamis dan integrasi REST API penuh.",
+    tags: ["JavaScript", "REST API", "Single Page App", "Web APIs", "State Management"],
+    liveUrl: "https://majidhadi-2045.github.io/Dicoding_Story-/",
+    metrics: [
+      { label: "Arsitektur", value: "Single Page App" },
+      { label: "Integrasi", value: "Dicoding REST API" },
+    ],
+  },
+  {
+    id: "proj-5",
+    title: "Native Android Recipe App",
+    category: "Fullstack Web",
+    year: "2025",
+    summary:
+      "Aplikasi mobile native pencarian resep kuliner yang dibangun menggunakan Kotlin & Android Studio.",
+    description:
+      "Aplikasi mobile native yang dibangun menggunakan Kotlin dan Android Studio. Menerapkan arsitektur Android modern (MVVM), antarmuka yang responsif, serta prinsip desain UI yang bersih dan interaktif.",
+    impact:
+      "Menerapkan prinsip Clean Architecture Android & komponen UI responsif native.",
+    tags: ["Kotlin", "Android Studio", "MVVM", "Android Architecture", "Responsive UI"],
+    githubUrl: "https://github.com/MajidHadi-2045/My_resep_kue",
+    metrics: [
+      { label: "Bahasa", value: "Kotlin Native" },
+      { label: "IDE", value: "Android Studio" },
+    ],
+  },
+  {
+    id: "proj-6",
+    title: "Bookshelf RESTful API Service",
+    category: "Fullstack Web",
+    year: "2025",
+    summary:
+      "Layanan backend microservice mandiri untuk pengelolaan koleksi buku digital dengan validasi payload rapi.",
+    description:
+      "Layanan backend mandiri untuk manajemen koleksi buku digital. Dilengkapi dengan validasi payload request yang ketat, struktur routing modular yang rapi, dan penanganan status error HTTP komprehensif.",
+    impact:
+      "Memenuhi 100% kriteria kualifikasi otomatisasi pengujian RESTful API backend.",
+    tags: ["Node.js", "Hapi.js", "RESTful API", "JavaScript", "Backend Microservice"],
+    metrics: [
+      { label: "Kepatuhan API", value: "100% Automated Test" },
+      { label: "Runtime", value: "Node.js" },
     ],
   },
 ];
@@ -268,7 +324,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend & Systems",
     categoryCode: "02 // BACKEND",
     skills: [
-      { name: "Node.js & Express", level: "Lanjutan", note: "RESTful API, Middleware, Autentikasi JWT" },
+      { name: "Node.js & Express / NestJS", level: "Lanjutan", note: "RESTful API, MQTT, Redis Caching, Prisma" },
       { name: "Python", level: "Menengah", note: "Pemrosesan Data, Skrip Automasi, Integrasi AI" },
       { name: "PostgreSQL & Prisma ORM", level: "Lanjutan", note: "Skema Relasional & Optimasi Query" },
       { name: "Redis & WebSockets", level: "Menengah", note: "Caching & Komunikasi Data Real-Time" },
@@ -302,7 +358,7 @@ export const certificates: Certificate[] = [
   },
   {
     id: "cert-2",
-    title: "Full-Stack Web Developer",
+    title: "Full-Stack Web Developer (Best Graduate)",
     issuer: "Coding Camp by DBS Foundation",
     year: "2025",
     badgeText: "DBS FOUNDATION",
@@ -340,8 +396,10 @@ export const certificates: Certificate[] = [
 ];
 
 export const extraAchievements: string[] = [
-  "Finalis Tingkat Nasional KRTI 2024 (Divisi LELA)",
-  "Tim Robotika Universitas Lampung",
-  "Staf Himpunan Mahasiswa Teknik Elektro (HIMATRO)",
+  "Lulusan Terbaik (Best Graduate) Full-Stack Web Development | Coding Camp by DBS Foundation (Feb - Jul 2025)",
+  "Graduate Program React Native & React.js | Asah by Dicoding (Agt - Des 2025)",
+  "Peserta Summer Course SCoMOA 2023 | Institut Teknologi Bandung (ITB) (Jul - Agt 2023)",
+  "Staf Divisi Event & PR | HIMATRO Universitas Lampung (Des 2022 - Feb 2025)",
+  "Finalis Tingkat Nasional KRTI 2024 (Divisi LELA) - Tim URO Unila",
   "Penerima Predikat SKPI Unggul Universitas Lampung",
 ];

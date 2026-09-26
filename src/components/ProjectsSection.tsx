@@ -65,7 +65,7 @@ export default function ProjectsSection() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 divide-y-[3px] lg:divide-y-0 lg:divide-x-[3px] divide-ink bg-base">
+      <div className="bg-ink grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3px]">
         {filteredProjects.map((proj, idx) => (
           <motion.div
             key={proj.id}
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="p-8 md:p-10 flex flex-col justify-between group hover:bg-white transition-colors duration-300 cursor-pointer"
+            className="bg-base p-8 md:p-10 flex flex-col justify-between group hover:bg-white transition-colors duration-300 cursor-pointer min-h-[420px]"
             onClick={() => setSelectedProject(proj)}
           >
             <div>
