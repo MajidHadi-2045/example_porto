@@ -54,7 +54,7 @@ export const personalInfo = {
   skpiBadge: "Predikat SKPI Unggul",
   email: "majidsolihin.h.22@gmail.com",
   location: "Bandar Lampung, Indonesia",
-  photoUrl: "", // Isi dengan path gambar di public/ (misal "/foto.jpg") kapan saja
+  photoUrl: "/Profil.svg",
   status: "TERSEDIA UNTUK KOLABORASI PROFESIONAL",
   bio: "Full-Stack Developer berlatar belakang S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul. Mengintegrasikan pendekatan rekayasa sistem yang terukur dengan praktik terbaik pengembangan web modern untuk membangun aplikasi yang andal, scalable, dan berkinerja tinggi.",
   philosophy: "Perangkat lunak yang unggul memadukan keandalan arsitektur, efisiensi komputasi, dan pengalaman pengguna yang presisi untuk menghadirkan nilai nyata.",
