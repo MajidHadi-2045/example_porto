@@ -49,7 +49,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p className="font-sans font-medium text-base sm:text-lg text-gray-800 leading-relaxed max-w-xl mb-7">
-            <strong className="font-bold text-ink">{personalInfo.name}</strong> — Full-Stack Developer & AI Specialist berlatar belakang S1 Teknik Elektro Universitas Lampung. Membangun aplikasi web modern dengan arsitektur yang tangguh, terukur, dan berkinerja tinggi.
+            <strong className="font-bold text-ink">{personalInfo.name}</strong> — {personalInfo.bio}
           </p>
 
           {/* Tactile Action Buttons */}

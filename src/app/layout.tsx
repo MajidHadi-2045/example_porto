@@ -31,21 +31,25 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Majid Solihin Hadi — Full Stack Web Developer & AI Enthusiast",
-  description: "Portofolio profesional Majid Solihin Hadi - Mahasiswa S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul. Spesialis Full-Stack Web Developer & AI Enthusiast.",
+  title: "Majid Solihin Hadi — Full-Stack Developer • IoT Engineer • Electrical Engineering",
+  description: "Portofolio profesional Majid Solihin Hadi - Full-Stack Developer, IoT Engineer, dan Lulusan S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul.",
   keywords: [
     "Majid Solihin Hadi",
-    "Full Stack Developer",
+    "Full-Stack Developer",
+    "IoT Engineer",
+    "Electrical Engineering",
     "Teknik Elektro Unila",
-    "React",
+    "NestJS",
+    "React Native",
+    "MQTT",
+    "Redis",
     "Next.js",
     "TypeScript",
-    "Tailwind CSS",
     "Portfolio"
   ],
   authors: [{ name: "Majid Solihin Hadi" }],
   openGraph: {
-    title: "Majid Solihin Hadi — Full Stack Web Developer",
+    title: "Majid Solihin Hadi — Full-Stack Developer • IoT Engineer • Electrical Engineering",
     description: "Design with Purpose. Code with Logic. Portofolio & rekam jejak Majid Solihin Hadi.",
     type: "website",
     locale: "id_ID",

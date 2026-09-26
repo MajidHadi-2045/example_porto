@@ -48,7 +48,7 @@ export const personalInfo = {
   name: "Majid Solihin Hadi",
   initials: "M.S.H.",
   signature: "Majid. S. Hadi",
-  role: "Full-Stack Web Developer & AI Specialist",
+  role: "Full-Stack Developer • IoT Engineer • Electrical Engineering",
   subRole: "S1 Teknik Elektro · Universitas Lampung",
   education: "S1 Teknik Elektro, Universitas Lampung",
   skpiBadge: "Predikat SKPI Unggul",
@@ -56,14 +56,15 @@ export const personalInfo = {
   location: "Bandar Lampung, Indonesia",
   photoUrl: "/profil.jfif",
   status: "TERSEDIA UNTUK KOLABORASI PROFESIONAL",
-  bio: "Full-Stack Developer berlatar belakang S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul. Mengintegrasikan pendekatan rekayasa sistem yang terukur dengan praktik terbaik pengembangan web modern untuk membangun aplikasi yang andal, scalable, dan berkinerja tinggi.",
-  philosophy: "Perangkat lunak yang unggul memadukan keandalan arsitektur, efisiensi komputasi, dan pengalaman pengguna yang presisi untuk menghadirkan nilai nyata.",
+  bio: "Full-Stack Developer, IoT Engineer, dan Lulusan S1 Teknik Elektro Universitas Lampung dengan predikat SKPI Unggul. Mengintegrasikan rekayasa sistem hardware-software (IoT, Embedded Sensors, Edge Caching) dengan arsitektur web modern full-stack untuk membangun sistem terdistribusi yang presisi, scalable, dan berkinerja tinggi.",
+  philosophy: "Memadukan prinsip rekayasa elektro, konektivitas IoT real-time, dan arsitektur web modern untuk menghadirkan solusi perangkat lunak berskala industri yang andal.",
   marqueeItems: [
     "MAJID SOLIHIN HADI",
-    "S1 TEKNIK ELEKTRO UNILA",
+    "FULL-STACK DEVELOPER",
+    "IOT ENGINEER",
+    "ELECTRICAL ENGINEERING UNILA",
     "PREDIKAT SKPI UNGGUL",
-    "FULL-STACK WEB DEVELOPER",
-    "APPLIED AI SPECIALIST",
+    "EVENT-DRIVEN ARCHITECTURE",
     "FINALIS NASIONAL KRTI 2024",
   ],
 };
@@ -220,6 +221,23 @@ export const projects: Project[] = [
   },
   {
     id: "proj-2",
+    title: "Off-Grid Solar-Powered Soil & LoRa Telemetry Node",
+    category: "Robotics & IoT",
+    year: "2025",
+    summary:
+      "Sistem IoT pemantauan kelembaban tanah & mikroiklim off-grid bertenaga surya dengan transmisi jarak jauh LoRa.",
+    description:
+      "Riset & pengembangan node pemantau lingkungan mandiri (Off-Grid Autonomous IoT Node) di Laboratorium Teknik Telekomunikasi UNILA. Dirancang khusus untuk operasi jangka panjang di tengah perkebunan tanpa akses pasokan listrik PLN. Menggunakan ESP32 sebagai pengontrol utama, Soil Moisture & DHT22 untuk pemantauan kadar air tanah & mikroiklim, RTC DS3231 untuk presisi timestamp, serta manajemen energi terbarukan via sensor INA219 dan pengatur daya CN3791 MPPT Solar Charger. Data ditransmisikan via komunikasi nirkabel jarak jauh daya rendah (LoRa LPWAN).",
+    impact:
+      "Memungkinkan pemantauan kadar air tanah & iklim 24/7 secara terintegrasi di tengah area perkebunan remote melalui energi mandiri panel surya + baterai dan jaringan nirkabel LoRa.",
+    tags: ["ESP32", "LoRa LPWAN", "Solar MPPT", "Soil Moisture", "INA219", "DHT22", "Embedded C++", "IoT Telemetry"],
+    metrics: [
+      { label: "Catu Daya", value: "Off-Grid Solar MPPT" },
+      { label: "Komunikasi", value: "LoRa LPWAN (Long Range)" },
+    ],
+  },
+  {
+    id: "proj-3",
     title: "Smart CO₂ — Real-Time Environmental Dashboard",
     category: "AI & Cloud",
     year: "2025",
@@ -237,7 +255,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "proj-3",
+    id: "proj-4",
     title: "Smart Cattle Barn Mobile App",
     category: "Fullstack Web",
     year: "2025",
@@ -255,7 +273,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "proj-4",
+    id: "proj-5",
     title: "Dicoding Story Web App",
     category: "Fullstack Web",
     year: "2025",
@@ -273,7 +291,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "proj-5",
+    id: "proj-6",
     title: "Native Android Recipe App",
     category: "Fullstack Web",
     year: "2025",
@@ -291,7 +309,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "proj-6",
+    id: "proj-7",
     title: "Bookshelf RESTful API Service",
     category: "Fullstack Web",
     year: "2025",
