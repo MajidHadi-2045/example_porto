@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data/portfolioData";
@@ -10,11 +10,11 @@ export default function HeroSection() {
   const [copied, setCopied] = useState(false);
   const hasPhoto = Boolean(personalInfo.photoUrl) && !imageError;
 
-  const handleCopyEmail = () => {
+  const handleCopyEmail = useCallback(() => {
     navigator.clipboard.writeText(personalInfo.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2800);
-  };
+  }, []);
 
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-between pt-8 sm:pt-14 pb-16 overflow-hidden border-b-[3px] border-ink bg-base">
