@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import { projects, Project } from "@/data/portfolioData";
 import ProjectModal from "./ProjectModal";
@@ -9,9 +9,15 @@ export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = activeCategory === "all"
-    ? projects
-    : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = useMemo(() => {
+    return activeCategory === "all"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
 
   return (
     <section id="projects" className="bg-base border-b-[3px] border-ink">
@@ -129,7 +135,7 @@ export default function ProjectsSection() {
 
       <ProjectModal 
         project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+        onClose={handleCloseModal} 
       />
     </section>
   );
