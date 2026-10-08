@@ -92,12 +92,36 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Action Row */}
-          <div className="flex justify-end pt-4 border-t-2 border-ink">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t-2 border-ink">
+            <div className="flex items-center gap-2">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs font-bold uppercase bg-accent text-white px-4 py-2 border-2 border-ink shadow-brutal-sm hover:bg-ink transition-colors flex items-center gap-1.5"
+                >
+                  <span>Akses Live App</span>
+                  <span>↗</span>
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs font-bold uppercase bg-white text-ink px-4 py-2 border-2 border-ink shadow-brutal-sm hover:bg-ink hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span>Source Code</span>
+                  <span>↗</span>
+                </a>
+              )}
+            </div>
             <button
               onClick={onClose}
-              className="font-mono text-xs font-bold uppercase bg-ink text-base px-6 py-2.5 border-2 border-ink hover:bg-accent transition-colors"
+              className="font-mono text-xs font-bold uppercase bg-ink text-base px-5 py-2 border-2 border-ink hover:bg-accent transition-colors"
             >
-              Tutup Modal [ESC]
+              Tutup [ESC]
             </button>
           </div>
         </div>

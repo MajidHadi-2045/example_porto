@@ -106,11 +106,11 @@ export default function AboutSection() {
                 <code>
                   <span className="text-purple-400">const</span> engineerProfile = &#123;<br />
                   &nbsp;&nbsp;name: <span className="text-yellow-300">&quot;{personalInfo.name}&quot;</span>,<br />
-                  &nbsp;&nbsp;coreStandards: [<span className="text-yellow-300">&quot;High Performance&quot;</span>, <span className="text-yellow-300">&quot;Type Safety&quot;</span>, <span className="text-yellow-300">&quot;Maintainability&quot;</span>],<br />
+                  &nbsp;&nbsp;honors: [<span className="text-yellow-300">&quot;S1 Teknik Elektro Unila&quot;</span>, <span className="text-yellow-300">&quot;Predikat SKPI Unggul&quot;</span>],<br />
                   &nbsp;&nbsp;specializations: <span className="text-blue-400">&#123;</span><br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;frontend: <span className="text-yellow-300">&quot;Next.js App Router + TypeScript&quot;</span>,<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;backend: <span className="text-yellow-300">&quot;Node.js + PostgreSQL + Prisma&quot;</span>,<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;aiWorkflow: <span className="text-yellow-300">&quot;LLM Orchestration & APIs&quot;</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;iotEngine: <span className="text-yellow-300">&quot;ESP32 + LoRa LPWAN + Solar MPPT&quot;</span>,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;backendArchitecture: <span className="text-yellow-300">&quot;NestJS + Express + MQTT + Redis + PostgreSQL&quot;</span>,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;frontendMobile: <span className="text-yellow-300">&quot;Next.js App Router + React Native + Kotlin&quot;</span><br />
                   &nbsp;&nbsp;<span className="text-blue-400">&#125;</span><br />
                   &#125;;
                 </code>
@@ -118,12 +118,12 @@ export default function AboutSection() {
 
               {activeTab === "hardware" && (
                 <code>
-                  <span className="text-purple-400">#include</span> <span className="text-yellow-300">&lt;telemetry_bridge.h&gt;</span><br />
-                  <span className="text-base/40">// Bridging hardware signal accuracy with web stream layer</span><br />
-                  <span className="text-purple-400">void</span> <span className="text-blue-400">init_telemetry_pipeline</span>() &#123;<br />
-                  &nbsp;&nbsp;configure_serial_baud(<span className="text-yellow-300">115200</span>);<br />
-                  &nbsp;&nbsp;enable_crc_verification();<br />
-                  &nbsp;&nbsp;stream_realtime_websocket();<br />
+                  <span className="text-purple-400">#include</span> <span className="text-yellow-300">&lt;telemetry_lora.h&gt;</span><br />
+                  <span className="text-base/40">// Off-grid solar-powered sensor node telemetry</span><br />
+                  <span className="text-purple-400">void</span> <span className="text-blue-400">init_field_node</span>() &#123;<br />
+                  &nbsp;&nbsp;enable_mppt_solar_charge(); <span className="text-base/40">// CN3791 & INA219 monitor</span><br />
+                  &nbsp;&nbsp;read_soil_microclimate();   <span className="text-base/40">// Soil Moisture & DHT22</span><br />
+                  &nbsp;&nbsp;transmit_lora_packet();     <span className="text-base/40">// Low-power long range</span><br />
                   &#125;
                 </code>
               )}
@@ -134,6 +134,7 @@ export default function AboutSection() {
                   &nbsp;&nbsp;<span className="text-purple-400">&quot;institution&quot;</span>: <span className="text-yellow-300">&quot;Universitas Lampung&quot;</span>,<br />
                   &nbsp;&nbsp;<span className="text-purple-400">&quot;degree&quot;</span>: <span className="text-yellow-300">&quot;S1 Teknik Elektro&quot;</span>,<br />
                   &nbsp;&nbsp;<span className="text-purple-400">&quot;academicHonor&quot;</span>: <span className="text-yellow-300">&quot;Predikat SKPI Unggul&quot;</span>,<br />
+                  &nbsp;&nbsp;<span className="text-purple-400">&quot;bestGraduate&quot;</span>: <span className="text-yellow-300">&quot;Coding Camp 2025 by DBS Foundation&quot;</span>,<br />
                   &nbsp;&nbsp;<span className="text-purple-400">&quot;nationalCompetition&quot;</span>: <span className="text-yellow-300">&quot;Finalis Nasional KRTI 2024 (LELA)&quot;</span><br />
                   &#125;
                 </code>
